@@ -1,167 +1,171 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Background & Centering */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #feece2;
+  background: linear-gradient(135deg, #d0ffd9 0%, #cce0ff 100%);
+  font-family: "Poppins", sans-serif;
 }
 
+/* Main Container with Glass Effect */
 .container {
-  background-color: #ffbe98;
-  padding: 5rem;
-  border-radius: 5rem;
-  border-style: groove;
-  min-height: 45vh;
-  width: 40%; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+  background: rgba(255, 255, 255, 0.25); /* Slightly more opaque */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .container:hover {
-  transform: scale(1.05) rotateY(10deg); 
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
+/* Heading */
 h2 {
-  font-size: 2.5rem; 
-  font-family: 'Arial Black', sans-serif; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-  margin-bottom: 1rem; 
   text-align: center;
-  background-color: #feece2;
-  border-radius: 0.5rem;
+  font-size: 2.2rem;
+  color: #064d34; /* Dark Green for visibility */
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-
-form select,button,input {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 0.75rem;
-}
-.from {
-  font-size: 1rem;
-  font-family:'Arial Black', sans-serif; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-.to{
-  font-size: 1rem; 
-  font-family:'Arial Black', sans-serif; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-.amount {
-  margin-bottom: 1rem; 
-  font-size: 1rem; 
-  font-family: 'Arial Black', sans-serif; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.amount label {
-  font-size: 1.25rem; 
-  font-weight: bold; 
-  margin-bottom: 0.5rem; 
+/* Input Section */
+.amount p,
+.from p,
+.to p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #064d34; /* Dark Green */
+  margin-bottom: 0.5rem;
 }
 
 .amount input {
   width: 100%;
-  border: 1px solid lightgray; 
-  border-radius: 0.75rem; 
-  height: 3rem;
-  padding-left: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+  border: 2px solid rgba(0, 77, 52, 0.7);
+  background: rgba(255, 255, 255, 0.4); /* More opaque */
+  color: #064d34;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
 }
 
-
-.select-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #feece2;
-  width: 80%; 
-  border-radius: 1rem; 
-  border: 1px solid rgb(10, 9, 9); 
-  padding: 0.5rem 1rem; 
-  transition: background-color 0.3s, transform 0.3s; 
+.amount input:focus {
+  border-color: #0a6847;
+  outline: none;
+  box-shadow: 0 0 10px rgba(10, 104, 71, 0.5);
 }
 
-.select-container:hover {
-  background-color: #f0f0f0; 
-  transform: scale(1.05); 
-}
-
-.select-container img {
-  max-width: 3rem; 
-}
-
-.msg {
-  margin: 2rem 0 2rem 0;
-  text-align: center;
-  background: #fff;
-  border-radius: 2rem;
-  font-size: 1rem; 
-  font-family: 'Arial Black', sans-serif; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-.msg:hover {
-  transform: scale(1.05) rotateY(10deg);
-}
-i.fa-solid.fa-arrow-right-arrow-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 7vh;
-  background-color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-radius:10px;
-  transition: transform 0.3s ease-in-out;
-  
-}
-
-
-i.fa-solid.fa-arrow-right-arrow-left:hover {
-  transform: translateY(-5px);
-}
-
-
-form button {
-  height: 3rem;
-  background-color: #feece2;
-  color: black;
-  font-style: oblique;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s; 
-  border-style: dashed;
-}
-
-form button:hover {
-  transform: scale(1.05) rotateY(10deg); 
-}
-
+/* Dropdown Container */
 .dropdown {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
-.dropdown i {
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.35); /* More opaque */
+  border: 1.5px solid rgba(0, 77, 52, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.select-container:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  border-color: #0a6847;
+  transform: scale(1.03);
+}
+
+.select-container img {
+  width: 2.5rem;
+  border-radius: 0.4rem;
+}
+
+.select-container select {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #064d34; /* Dark green for visibility */
+  outline: none;
+  cursor: pointer;
+}
+
+/* Arrow Icon */
+i.fa-solid.fa-arrow-right-arrow-left {
   font-size: 1.5rem;
-  margin: 0 1rem; 
+  background: #0a6847;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.6rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.dropdown .from,
-.dropdown .to {
-  flex: 1;
+i.fa-solid.fa-arrow-right-arrow-left:hover {
+  transform: rotate(180deg);
+  background-color: #0c8759;
+}
+
+/* Message Box */
+.msg {
+  margin: 2rem 0;
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #064d34; /* Dark green */
+  background: rgba(255, 255, 255, 0.35); /* Semi-transparent */
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 77, 52, 0.7);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s;
 }
 
-.dropdown label {
-  font-size: 1.25rem; 
-  margin-bottom: 0.5rem; 
+.msg:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  background: rgba(10, 104, 71, 0.9); /* More opaque green */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(10, 104, 71, 0.6);
+}
+
+form button:hover {
+  background-color: #0a6847;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(10, 104, 71, 0.7);
 }
